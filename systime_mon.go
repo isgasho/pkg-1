@@ -6,7 +6,7 @@ import (
 	"github.com/ngaut/log"
 )
 
-// Call systimeErrHandler if system time jump backward.
+// StartMonitor will call systimeErrHandler if system time jump backward.
 func StartMonitor(now func() time.Time, systimeErrHandler func()) {
 	log.Info("start system time monitor")
 	tick := time.NewTicker(100 * time.Millisecond)
