@@ -8,7 +8,7 @@ import (
 func TestSystimeMonitor(t *testing.T) {
 	jumpForward := false
 	trigged := false
-	go SystimeMonitor(
+	go StartMonitor(
 		func() time.Time {
 			if !trigged {
 				trigged = true
